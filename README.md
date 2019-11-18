@@ -6,7 +6,7 @@ The API is located at [travel-history-api](https://n13t3f6q5i.execute-api.eu-wes
 ## for full spec, please follow the link below:
   [spec](https://elvin-specs.s3-eu-west-1.amazonaws.com/Backend+engineer+(interview).pdf)
 
-## solution
+## solution:
 
 ![Image description](https://elvin-specs.s3-eu-west-1.amazonaws.com/travel+history+api+(2).png)
 
@@ -41,7 +41,7 @@ install [Serverless](https://serverless.com/)@1.57.0
 ## to test:
 `npm test`
 
-## assumptions
+## assumptions:
 1. I have assumed that we have access to the pre-existing internal API which is logging the arrival information so that I can change it's output as I require extra information to be logged, i.e
 ```
 {
@@ -61,7 +61,7 @@ I also renamed the properties as in the original example it is not clear which p
 
 4. As there are on average 102,465 flights per day , this log will grow linearly very fast and probably lambda's resources will not be enough to do the sort , but for now the assumption is we have rate limit on trips being logged ( i.e hitting POST /trip )
 
-## TODO
+## TODO:
 
 - [ ] Add schema validation
 - [ ] Add integration tests
