@@ -1,0 +1,26 @@
+service: travel-history-api
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: eu-west-1
+  memorySize: 128
+  timeout: 10
+
+functions:
+  postTrip:
+    handler: handler.postTrip
+    events:
+      - http:
+          path: trip
+          method: post
+          cors: true
+  getTrips:
+    handler: handler.getTrips
+    events:
+      - http:
+          path: trips/{captainName}
+          method: get
+          cors: true
+plugins:
+  - serverless-offline
